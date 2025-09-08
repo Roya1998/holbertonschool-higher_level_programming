@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import this
 print("The Zen of Python, by Tim Peters\n\n"  
 "Beautiful is better than ugly.\n"
 "Explicit is better than implicit\n"
