@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-print("The Zen of Python, by Tim Peters\n\n"  
+print("The Zen of Python, by Tim Peters\n"  
 "Beautiful is better than ugly.\n"
 "Explicit is better than implicit\n"
 "Simple is better than complex.\n"
