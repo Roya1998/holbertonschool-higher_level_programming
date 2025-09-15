@@ -4,9 +4,9 @@ import sys
 if __name__ == "__main__":
 
     if (len(sys.argv) == 1):
-        print("{}: {}".format(len(sys.argv),"argument"))
+        print("{} {}:".format(len(sys.argv),"argument"))
     else:
-        print("{}: {}".format(len(sys.argv), "arguments"))
+        print("{} {}:".format(len(sys.argv), "arguments"))
 
 
 
