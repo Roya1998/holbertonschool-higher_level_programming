@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 import sys
 
+if __name__ == "__main__":
 
-if (len(sys.argv) == 1):
-    print(len(sys.argv), "argument")
-else:
-    print(len(sys.argv), "arguments")
+    if (len(sys.argv) == 1):
+        print(len(sys.argv), "argument")
+    else:
+        print(len(sys.argv), "arguments")
 
 
 
