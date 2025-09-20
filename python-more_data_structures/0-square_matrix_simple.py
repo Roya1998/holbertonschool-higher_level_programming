@@ -9,6 +9,7 @@ def square_matrix_simple(matrix=[]):
         for x in num:
             square=x*x
             newRow.append(square)
-            squareMatrix.append(newRow)
+        squareMatrix.append(newRow)
+            
     return squareMatrix
-    print("Num is", result)
+ 
