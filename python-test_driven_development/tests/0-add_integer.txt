@@ -29,7 +29,7 @@ TypeError: a must be an integer
 >>> add_integer(0, 0)
 0
 
-# 🔥 Big numbers / Float overflow cases
+#  Big numbers / Float overflow cases
 >>> add_integer(10**100, 1)
 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001
 
