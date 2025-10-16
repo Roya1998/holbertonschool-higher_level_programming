@@ -3,14 +3,16 @@
 
 
 class MyList(list):
-    """A subclass of list that can print itself sorted."""
+    """
+    A subclass of the built-in list class.
+
+    Provides a method to print the list elements in ascending sorted order
+    without modifying the original list.
+    """
 
     def print_sorted(self):
-        """
-        Prints the list sorted in ascending order.
-
-        Works for any integers in the list, including negative numbers.
-        Does not modify the original list.
-        """
-        sorted_list = sorted(self)  # sort a copy of the list
-        print(sorted_list)
+        """Prints the list, but sorted in ascending order."""
+        # The built-in sorted() function returns a new sorted list,
+        # leaving the original list instance (self) unchanged.
+        # This adheres to the requirement not to modify the list itself.
+        print(sorted(self))
