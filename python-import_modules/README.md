@@ -1,1 +1,1 @@
-This file is created to practise import
+This folder is created to practise import

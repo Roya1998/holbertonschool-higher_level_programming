@@ -1,1 +1,1 @@
-This file is created to practise pythone data structures.
+This folder is created to practise pythone data structures.

@@ -1,1 +1,1 @@
-This file is created to practise classes in Python
+This folder is created to practise classes in Python

@@ -1,1 +1,1 @@
-This file is created to practice Python Exceptions.
+This folder is created to practice Python Exceptions.
