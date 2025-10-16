@@ -2,6 +2,6 @@
 
 '''Defining an object attribute lookup function'''
 
-def lookup(self):
+def lookup(obj):
     '''Returning a list of an obj`s attributes'''
-    retunr(dir(obj))
+    return(dir(obj))
