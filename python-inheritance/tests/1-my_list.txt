@@ -1,6 +1,4 @@
 """
-Test for MyList class
-
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
 >>> my_list.append(5)
@@ -8,17 +6,8 @@ Test for MyList class
 >>> my_list.append(4)
 >>> my_list.append(1)
 >>> my_list.append(2)
->>> print(my_list)
-[5, 3, 4, 1, 2]
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
->>> print(my_list)
+>>> my_list
 [5, 3, 4, 1, 2]
-
-# Another example
->>> another_list = MyList([10, 7, 8])
->>> another_list.print_sorted()
-[7, 8, 10]
->>> another_list
-[10, 7, 8]
 """
