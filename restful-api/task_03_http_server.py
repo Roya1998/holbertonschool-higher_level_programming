@@ -37,17 +37,16 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(info).encode('utf-8'))
 
         else:
-            # Handle undefined endpoints
+            # Handle undefined endpoints with plain text
             self.send_response(404)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            error_msg = {"error": "Endpoint not found"}
-            self.wfile.write(json.dumps(error_msg).encode('utf-8'))
+            self.wfile.write(b"Endpoint not found")
 
 
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler):
     """Run the HTTP server."""
-    server_address = ('', 8000)  # Host '' means localhost
+    server_address = ('', 8000)
     httpd = server_class(server_address, handler_class)
     print("Starting server on port 8000...")
     httpd.serve_forever()
