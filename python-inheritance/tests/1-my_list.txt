@@ -1,13 +1,72 @@
 """
+Test file for MyList class
+"""
+
 >>> MyList = __import__('1-my_list').MyList
+
+# Test 1: Basic functionality
 >>> my_list = MyList()
->>> my_list.append(5)
->>> my_list.append(3)
->>> my_list.append(4)
 >>> my_list.append(1)
+>>> my_list.append(4)
 >>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
->>> my_list
-[5, 3, 4, 1, 2]
-"""
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+# Test 2: Empty list
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+# Test 3: Single element
+>>> single = MyList()
+>>> single.append(1)
+>>> single.print_sorted()
+[1]
+
+# Test 4: Already sorted list
+>>> sorted_list = MyList()
+>>> sorted_list.append(1)
+>>> sorted_list.append(2)
+>>> sorted_list.append(3)
+>>> sorted_list.print_sorted()
+[1, 2, 3]
+
+# Test 5: Reverse sorted list
+>>> reverse_list = MyList()
+>>> reverse_list.append(5)
+>>> reverse_list.append(4)
+>>> reverse_list.append(3)
+>>> reverse_list.append(2)
+>>> reverse_list.append(1)
+>>> reverse_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test 6: List with negative numbers
+>>> negative_list = MyList()
+>>> negative_list.append(-5)
+>>> negative_list.append(3)
+>>> negative_list.append(-1)
+>>> negative_list.append(0)
+>>> negative_list.print_sorted()
+[-5, -1, 0, 3]
+
+# Test 7: List with duplicates
+>>> dup_list = MyList()
+>>> dup_list.append(3)
+>>> dup_list.append(1)
+>>> dup_list.append(3)
+>>> dup_list.append(2)
+>>> dup_list.append(1)
+>>> dup_list.print_sorted()
+[1, 1, 2, 3, 3]
+
+# Test 8: Verify inheritance
+>>> my_list = MyList()
+>>> isinstance(my_list, list)
+True
