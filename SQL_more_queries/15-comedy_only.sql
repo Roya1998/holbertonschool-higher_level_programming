@@ -1,6 +1,9 @@
-SELECT ts.title
-FROM tv_shows AS ts
-JOIN tv_show_genres AS tsg ON ts.id = tsg.show_id
-JOIN tv_genres AS tg ON tsg.genre_id = tg.id
-WHERE tg.name = 'Comedy'
-ORDER BY ts.title ASC;
+-- Lists all Comedy shows in the database hbtn_0d_tvshows
+-- Each record displays: tv_shows.title
+-- Results are sorted in ascending order by show title
+SELECT tv_shows.title
+FROM tv_shows
+INNER JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+INNER JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
+WHERE tv_genres.name = 'Comedy'
+ORDER BY tv_shows.title ASC;
