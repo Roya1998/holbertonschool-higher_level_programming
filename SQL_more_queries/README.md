@@ -1,0 +1,1 @@
+This folder is created to practise SQL more queries tasks
