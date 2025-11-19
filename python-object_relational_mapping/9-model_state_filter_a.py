@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that lists all State objects that contain the letter 'a' 
+Script that lists all State objects that contain the letter 'a'
 from the database hbtn_0e_6_usa, using SQLAlchemy.
 The script takes 3 arguments: mysql username, mysql password,database name.
 Results are sorted in ascending order by states.id.
