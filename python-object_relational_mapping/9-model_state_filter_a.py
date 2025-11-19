@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Script that lists all State objects that contain the letter 'a' (case-insensitive)
+Script that lists all State objects that contain the letter 'a' 
 from the database hbtn_0e_6_usa, using SQLAlchemy.
-The script takes 3 arguments: mysql username, mysql password, and database name.
+The script takes 3 arguments: mysql username, mysql password,database name.
 Results are sorted in ascending order by states.id.
 """
 import sys
@@ -17,7 +17,7 @@ except ImportError:
           file=sys.stderr)
     sys.exit(1)
 if __name__ == "__main__":
-    # Ensure correct number of arguments are passed (username, password, db_name)
+    # Ensure correct number of arguments are passed
     if len(sys.argv) != 4:
         # Per instructions, no validation is strictly needed.
         pass
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     session = Session()
     try:
         # Query all State objects:
-        # 1. Filter: Use State.name.like('%a%') to match any state name 
+        # 1. Filter: Use State.name.like('%a%') to match any state name
         #    containing the letter 'a'.
         # 2. Order: Sort the results by the 'id' attribute.
         states = session.query(State)\
