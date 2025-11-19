@@ -38,7 +38,7 @@ if __name__ == "__main__":
         # FIX: Added 'BINARY' keyword to force a case-sensitive match
         # on the 'name' column, ensuring only 'Nevada' and not 'nevada'
         # or 'neVAda' is returned.
-        query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
+        query = "SELECT * FROM WHERE BINARY = '{}' ORDER BY id ASC".format(
             state_name_searched
         )
         # Execute the SQL query
