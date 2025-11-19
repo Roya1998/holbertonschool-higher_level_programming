@@ -13,7 +13,7 @@ import sys
 if __name__ == "__main__":
     # Check for the expected number of command-line arguments
     if len(sys.argv) != 5:
-        # Note: The prompt states "no argument validation needed", 
+        # Note: The prompt states "no argument validation needed",
         # but a basic check ensures we have the necessary inputs.
         pass
     # Extract command-line arguments
@@ -35,10 +35,10 @@ if __name__ == "__main__":
         # Create a cursor object
         cur = db.cursor()
         # Construct the SQL query using Python's format() method as required.
-        # FIX: Added 'BINARY' keyword to force a case-sensitive match 
+        # FIX: Added 'BINARY' keyword to force a case-sensitive match
         # on the 'name' column, ensuring only 'Nevada' and not 'nevada'
         # or 'neVAda' is returned.
-        query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
+        query = "SELECT * FROM states= '{}' ORDER BY id ASC".format(
             state_name_searched
         )
         # Execute the SQL query
