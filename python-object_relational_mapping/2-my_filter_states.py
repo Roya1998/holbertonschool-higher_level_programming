@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script that takes in an argument and displays all values in the states
-table of hbtn_0e_0_usa where name matches the argument, 
+table of hbtn_0e_0_usa where name matches the argument,
 using the MySQLdb module.
 
 The script takes 4 arguments:
@@ -15,7 +15,7 @@ import sys
 if __name__ == "__main__":
     # Check for the expected number of command-line arguments
     if len(sys.argv) != 5:
-        # Note: The prompt states "no argument validation needed", 
+        # Note: The prompt states "no argument validation needed",
         # but a basic check ensures we have the necessary inputs.
         # We proceed assuming the user provides 4 arguments as per the example.
         pass
@@ -38,8 +38,8 @@ if __name__ == "__main__":
         # Create a cursor object
         cur = db.cursor()
         # Construct the SQL query using Python's format() method as required.
-        # WARNING: Using format() for user input in SQL queries is highly 
-        # susceptible to SQL injection attacks. In production code, 
+        # WARNING: Using format() for user input in SQL queries is highly
+        # susceptible to SQL injection attacks. In production code,
         # always use parameterized queries (e.g., cur.execute(sql, (param,))).
         query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
             state_name_searched
