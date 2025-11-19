@@ -7,6 +7,8 @@ from sqlalchemy.ext.declarative import declarative_base
 # Base class for all ORM models
 Base = declarative_base()
 class State(Base):
+    
+    
     """
     State class linked to the MySQL table 'states'
     """
