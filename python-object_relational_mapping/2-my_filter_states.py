@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that displays all values in states"""
+"""Script that displays all values in states table"""
 import MySQLdb
 import sys
 if __name__ == "__main__":
