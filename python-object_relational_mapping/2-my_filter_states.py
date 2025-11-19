@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """
 Script that takes in an argument and displays all values in the states
-table of hbtn_0e_0_usa where name matches the argument,
-using the MySQLdb module.
-
+table of hbtn_0e_0_usa where name matches the argument.
 The script takes 4 arguments:
 1. mysql username
 2. mysql password
@@ -15,9 +13,8 @@ import sys
 if __name__ == "__main__":
     # Check for the expected number of command-line arguments
     if len(sys.argv) != 5:
-        # Note: The prompt states "no argument validation needed",
+        # Note: The prompt states "no argument validation needed", 
         # but a basic check ensures we have the necessary inputs.
-        # We proceed assuming the user provides 4 arguments as per the example.
         pass
     # Extract command-line arguments
     mysql_username = sys.argv[1]
@@ -38,10 +35,10 @@ if __name__ == "__main__":
         # Create a cursor object
         cur = db.cursor()
         # Construct the SQL query using Python's format() method as required.
-        # WARNING: Using format() for user input in SQL queries is highly
-        # susceptible to SQL injection attacks. In production code,
-        # always use parameterized queries (e.g., cur.execute(sql, (param,))).
-        query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(
+        # FIX: Added 'BINARY' keyword to force a case-sensitive match 
+        # on the 'name' column, ensuring only 'Nevada' and not 'nevada'
+        # or 'neVAda' is returned.
+        query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
             state_name_searched
         )
         # Execute the SQL query
