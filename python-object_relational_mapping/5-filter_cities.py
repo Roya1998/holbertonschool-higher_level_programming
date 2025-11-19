@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all cities of a given state from hbtn_0e_4_usa (safe from SQL injections).
+Lists all cities of a given state from hbtn_0e_4_usa.
 """
 import MySQLdb
 import sys
