@@ -41,7 +41,7 @@ if __name__ == "__main__":
         # WARNING: Using format() for user input in SQL queries is highly
         # susceptible to SQL injection attacks. In production code,
         # always use parameterized queries (e.g., cur.execute(sql, (param,))).
-        query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
+        query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(
             state_name_searched
         )
         # Execute the SQL query
