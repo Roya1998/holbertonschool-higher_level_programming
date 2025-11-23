@@ -1,0 +1,1 @@
+This file created to practise Python objects
