@@ -9,17 +9,25 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Usage: ./10-model_state_my_get.py <username> <password> "
               "<database> <state_name>")
         sys.exit(1)
 
-    username, password, db_name, state_name = sys.argv[1], sys.argv[2], \
-                                                sys.argv[3], sys.argv[4]
+    username, password, db_name, state_name = (
+        sys.argv[1],
+        sys.argv[2],
+        sys.argv[3],
+        sys.argv[4],
+    )
+
     # Create engine to connect to the MySQL database
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost:'
-                           f'3306/{db_name}', pool_pre_ping=True)
+    engine = create_engine(
+        f'mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}',
+        pool_pre_ping=True
+    )
 
     # Create a session
     Session = sessionmaker(bind=engine)
