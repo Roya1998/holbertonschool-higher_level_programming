@@ -1,0 +1,1 @@
+This folder is created to practise Python server side rendering
